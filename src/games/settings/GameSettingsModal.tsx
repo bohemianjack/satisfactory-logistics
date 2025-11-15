@@ -1,5 +1,10 @@
 import { SelectIconInput } from '@/core/form/SelectIconInput';
+import { useFormOnChange } from '@/core/form/useFormOnChange';
+import { useStore } from '@/core/zustand';
+import { GameSettings } from '@/games/Game';
+import { useGameAllowedBuildings, useGameSettings } from '@/games/gamesSlice';
 import {
+  FactoryBuildingsForRecipes,
   FactoryConveyorBelts,
   FactoryPipelinesExclAlternates,
 } from '@/recipes/FactoryBuilding';
@@ -8,18 +13,16 @@ import {
   Button,
   Checkbox,
   ColorInput,
+  Group,
   Image,
   Modal,
   Space,
   Stack,
+  Text,
   Title,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSettings } from '@tabler/icons-react';
-import { useFormOnChange } from '@/core/form/useFormOnChange';
-import { useStore } from '@/core/zustand';
-import { GameSettings } from '@/games/Game';
-import { useGameSettings } from '@/games/gamesSlice';
 
 export interface IGameSettingsModalProps {
   withLabel?: boolean;
@@ -54,6 +57,7 @@ const PipelinesOptions = FactoryPipelinesExclAlternates.map(
 export function GameSettingsModal(props: IGameSettingsModalProps) {
   const [opened, { open, close }] = useDisclosure(false);
   const settings = useGameSettings();
+  const allowedBuildings = useGameAllowedBuildings();
   const onChangeHandler = useFormOnChange<GameSettings>(updateGameSettings);
 
   return (
@@ -110,6 +114,61 @@ export function GameSettingsModal(props: IGameSettingsModalProps) {
             onChange={onChangeHandler('maxPipeline')}
             placeholder="No pipeline selected"
           />
+          <Title order={3} mt="md" mb="md">
+            Available Buildings
+          </Title>
+          <Text size="sm" c="dimmed" mb="xs">
+            Select which buildings you have unlocked in your save. When you
+            create a new factory, only these buildings will be available. This
+            mirrors how Satisfactory unlocks work.
+          </Text>
+          <Group gap="xs" mb="sm">
+            <Button
+              size="xs"
+              variant="light"
+              onClick={() => {
+                useStore.getState().enableAllGameBuildings();
+                useStore.getState().syncGameBuildingsToFactories();
+              }}
+            >
+              Enable All
+            </Button>
+            <Button
+              size="xs"
+              variant="light"
+              color="red"
+              onClick={() => {
+                useStore.getState().disableAllGameBuildings();
+                useStore.getState().syncGameBuildingsToFactories();
+              }}
+            >
+              Disable All
+            </Button>
+          </Group>
+          <Stack gap="xs">
+            {FactoryBuildingsForRecipes.map(building => (
+              <Checkbox
+                key={building.id}
+                label={
+                  <Group gap="xs">
+                    <Image
+                      src={building.imagePath.replace('_256', '_64')}
+                      width={24}
+                      height={24}
+                    />
+                    {building.name}
+                  </Group>
+                }
+                checked={allowedBuildings?.includes(building.id) ?? false}
+                onChange={e => {
+                  useStore
+                    .getState()
+                    .toggleGameBuilding(building.id, e.currentTarget.checked);
+                  useStore.getState().syncGameBuildingsToFactories();
+                }}
+              />
+            ))}
+          </Stack>
         </Stack>
         <Space h={50} />
       </Modal>
