@@ -44,7 +44,10 @@ export const factoriesSlice = createSlice({
         if (!factory) return;
 
         // Initialize with empty array if not set
-        if (factory.allowedBuildings === undefined || factory.allowedBuildings === null) {
+        if (
+          factory.allowedBuildings === undefined ||
+          factory.allowedBuildings === null
+        ) {
           factory.allowedBuildings = [];
         }
 

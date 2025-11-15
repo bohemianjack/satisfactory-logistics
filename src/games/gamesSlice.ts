@@ -79,24 +79,23 @@ export const gamesSlice = createSlice({
         }
         state.games[targetId].allowedBuildings = allowedBuildings;
       },
-    toggleGameBuilding:
-      (buildingId: string, enabled?: boolean) => state => {
-        const game = state.games[state.selected ?? ''];
-        if (!game) return;
+    toggleGameBuilding: (buildingId: string, enabled?: boolean) => state => {
+      const game = state.games[state.selected ?? ''];
+      if (!game) return;
 
-        if (!game.allowedBuildings) {
-          game.allowedBuildings = [];
-        }
+      if (!game.allowedBuildings) {
+        game.allowedBuildings = [];
+      }
 
-        const index = game.allowedBuildings.indexOf(buildingId);
-        const shouldAdd = enabled ?? index === -1;
+      const index = game.allowedBuildings.indexOf(buildingId);
+      const shouldAdd = enabled ?? index === -1;
 
-        if (shouldAdd && index === -1) {
-          game.allowedBuildings.push(buildingId);
-        } else if (!shouldAdd && index !== -1) {
-          game.allowedBuildings.splice(index, 1);
-        }
-      },
+      if (shouldAdd && index === -1) {
+        game.allowedBuildings.push(buildingId);
+      } else if (!shouldAdd && index !== -1) {
+        game.allowedBuildings.splice(index, 1);
+      }
+    },
     enableAllGameBuildings: () => state => {
       const game = state.games[state.selected ?? ''];
       if (!game) return;

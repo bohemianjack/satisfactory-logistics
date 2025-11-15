@@ -3,9 +3,9 @@ import { useStore } from '@/core/zustand';
 import { useFactory } from '@/factories/store/factoriesSlice';
 import { useGameAllowedBuildings, useGameSetting } from '@/games/gamesSlice.ts';
 import {
-    FactoryBuildingsForRecipes,
-    FactoryConveyorBelts,
-    FactoryPipelinesExclAlternates,
+  FactoryBuildingsForRecipes,
+  FactoryConveyorBelts,
+  FactoryPipelinesExclAlternates,
 } from '@/recipes/FactoryBuilding';
 import { AllFactoryItemsMap } from '@/recipes/FactoryItem';
 import { FactoryItemImage } from '@/recipes/ui/FactoryItemImage';
@@ -13,16 +13,16 @@ import { WorldResourcesList } from '@/recipes/WorldResources';
 import type { SolverInstance } from '@/solver/store/Solver';
 import { usePathSolverRequest } from '@/solver/store/solverSelectors';
 import {
-    Alert,
-    Checkbox,
-    Group,
-    Image,
-    List,
-    Radio,
-    SimpleGrid,
-    Stack,
-    Switch,
-    Text
+  Alert,
+  Checkbox,
+  Group,
+  Image,
+  List,
+  Radio,
+  SimpleGrid,
+  Stack,
+  Switch,
+  Text,
 } from '@mantine/core';
 import { IconInfoCircleFilled } from '@tabler/icons-react';
 import { useState } from 'react';
@@ -46,7 +46,8 @@ export function SolverLimitationsDrawer(
 
   const [advanced, setAdvanced] = useState(false);
   const [useFactoryOverride, setUseFactoryOverride] = useState(
-    factory?.allowedBuildings !== undefined && factory?.allowedBuildings !== null
+    factory?.allowedBuildings !== undefined &&
+      factory?.allowedBuildings !== null,
   );
 
   const showAdvanced =
@@ -133,15 +134,18 @@ export function SolverLimitationsDrawer(
                   // Initialize with current game settings
                   useStore
                     .getState()
-                    .setFactoryAllowedBuildings(id!, gameAllowedBuildings ?? []);
+                    .setFactoryAllowedBuildings(
+                      id!,
+                      gameAllowedBuildings ?? [],
+                    );
                 } else {
                   // Clear factory override, use game settings
                   useStore.getState().setFactoryAllowedBuildings(id!, null);
                 }
                 // Recalculate blocked buildings
                 const allowedBuildings = override
-                  ? gameAllowedBuildings ?? []
-                  : gameAllowedBuildings ?? [];
+                  ? (gameAllowedBuildings ?? [])
+                  : (gameAllowedBuildings ?? []);
                 const blockedBuildings = FactoryBuildingsForRecipes.filter(
                   b => !allowedBuildings.includes(b.id),
                 ).map(b => b.id);
@@ -165,7 +169,7 @@ export function SolverLimitationsDrawer(
           )}
           {FactoryBuildingsForRecipes.map(building => {
             const isChecked = useFactoryOverride
-              ? factory?.allowedBuildings?.includes(building.id) ?? false
+              ? (factory?.allowedBuildings?.includes(building.id) ?? false)
               : !request?.blockedBuildings?.includes(building.id);
 
             return (

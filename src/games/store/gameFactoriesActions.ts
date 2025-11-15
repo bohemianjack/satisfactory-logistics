@@ -108,12 +108,15 @@ export const gameFactoriesActions = createActions({
     game.factoriesIds.forEach(factoryId => {
       const factory = state.factories.factories[factoryId];
       const solver = state.solvers.instances[factoryId];
-      
+
       // Skip if factory has its own building overrides
-      if (factory?.allowedBuildings !== undefined && factory?.allowedBuildings !== null) {
+      if (
+        factory?.allowedBuildings !== undefined &&
+        factory?.allowedBuildings !== null
+      ) {
         return;
       }
-      
+
       if (solver) {
         solver.request.blockedBuildings = blockedBuildings;
       }

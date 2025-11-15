@@ -145,7 +145,8 @@ export function GameSettingsModal(props: IGameSettingsModalProps) {
               Disable All
             </Button>
           </Group>
-          <Stack gap="xs">{FactoryBuildingsForRecipes.map(building => (
+          <Stack gap="xs">
+            {FactoryBuildingsForRecipes.map(building => (
               <Checkbox
                 key={building.id}
                 label={
