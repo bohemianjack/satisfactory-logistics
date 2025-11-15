@@ -7,6 +7,8 @@ export interface Factory {
   inputs: FactoryInput[];
   outputs: FactoryOutput[];
   powerConsumption?: number | null;
+  /** Factory-specific building overrides. If set, overrides game-level allowedBuildings */
+  allowedBuildings?: string[] | null;
 }
 
 export interface FactoryInput {
