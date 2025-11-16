@@ -838,5 +838,221 @@
     "buildCost": [
       { "material": "Iron Rod", "quantity": 2 }
     ]
+  },
+  {
+    "id": "conveyor_merger",
+    "name": "Conveyor Merger",
+    "index": 58,
+    "description": "Merges up to three input conveyors in sequence and outputs all resources onto the output conveyor. Has an internal inventory of 9 items.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_splitter",
+    "name": "Conveyor Splitter",
+    "index": 59,
+    "description": "Takes items from a single input Conveyor Belt or Lift and outputs them between three other belts. Has an internal inventory of 9 items.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "smart_splitter",
+    "name": "Smart Splitter",
+    "index": 60,
+    "description": "Upgraded version of the Splitter capable of filtering its input and handling overflow. Each output can be set to Any, None, Any Undefined, Overflow, or a specific item type.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 2 },
+      { "material": "Rotor", "quantity": 2 },
+      { "material": "AI Limiter", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "programmable_splitter",
+    "name": "Programmable Splitter",
+    "index": 61,
+    "description": "Upgraded version of Smart Splitter that allows multiple items per output with a maximum of 64 rules total. Unlocked via Caterium Research in MAM.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 4 },
+      { "material": "Rotor", "quantity": 4 },
+      { "material": "AI Limiter", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk1",
+    "name": "Conveyor Lift Mk.1",
+    "index": 62,
+    "description": "Transports up to 60 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk2",
+    "name": "Conveyor Lift Mk.2",
+    "index": 63,
+    "description": "Transports up to 120 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk3",
+    "name": "Conveyor Lift Mk.3",
+    "index": 64,
+    "description": "Transports up to 270 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk4",
+    "name": "Conveyor Lift Mk.4",
+    "index": 65,
+    "description": "Transports up to 480 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Encased Industrial Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk5",
+    "name": "Conveyor Lift Mk.5",
+    "index": 66,
+    "description": "Transports up to 780 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Alclad Aluminum Sheet", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk1",
+    "name": "Conveyor Belt Mk.1",
+    "index": 67,
+    "description": "Transports up to 60 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk2",
+    "name": "Conveyor Belt Mk.2",
+    "index": 68,
+    "description": "Transports up to 120 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk3",
+    "name": "Conveyor Belt Mk.3",
+    "index": 69,
+    "description": "Transports up to 270 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk4",
+    "name": "Conveyor Belt Mk.4",
+    "index": 70,
+    "description": "Transports up to 480 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Encased Industrial Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk5",
+    "name": "Conveyor Belt Mk.5",
+    "index": 71,
+    "description": "Transports up to 780 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Alclad Aluminum Sheet", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk6",
+    "name": "Conveyor Belt Mk.6",
+    "index": 72,
+    "description": "Transports up to 1200 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Ficsonium", "quantity": 1 }
+    ]
   }
 ]

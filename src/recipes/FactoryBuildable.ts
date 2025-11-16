@@ -111,3 +111,46 @@ export const FactoryRailings = sortBy(
   ),
   'name',
 );
+
+/**
+ * All conveyor splitters and mergers
+ */
+export const FactoryConveyorSplitters = sortBy(
+  AllFactoryBuildables.filter(buildable => 
+    buildable.id.includes('splitter') || 
+    buildable.id.includes('merger')
+  ),
+  'name',
+);
+
+/**
+ * All conveyor lifts
+ */
+export const FactoryConveyorLifts = sortBy(
+  AllFactoryBuildables.filter(buildable => 
+    buildable.id.startsWith('conveyor_lift_')
+  ),
+  'name',
+);
+
+/**
+ * All conveyor belts
+ */
+export const FactoryConveyorBelts = sortBy(
+  AllFactoryBuildables.filter(buildable => 
+    buildable.id.startsWith('conveyor_belt_')
+  ),
+  'name',
+);
+
+/**
+ * All logistics infrastructure (belts, splitters, mergers, lifts)
+ */
+export const FactoryLogistics = sortBy(
+  AllFactoryBuildables.filter(buildable => 
+    buildable.id.includes('conveyor_') ||
+    buildable.id.includes('splitter') ||
+    buildable.id.includes('merger')
+  ),
+  'name',
+);
