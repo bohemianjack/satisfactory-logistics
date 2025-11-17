@@ -17,6 +17,7 @@ export const BuildableNode = memo(({ data, selected }: NodeProps<BuildableNodeDa
   const scale = 8;
   const displayWidth = width * scale;
   const displayLength = length * scale;
+  const nameFontSize = Math.max(8, Math.min(12, Math.floor(displayWidth / 10)));
 
   // Apply rotation
   const rotationStyle = {
@@ -27,18 +28,19 @@ export const BuildableNode = memo(({ data, selected }: NodeProps<BuildableNodeDa
   // Color coding based on type
   const getColor = () => {
     const name = buildableName.toLowerCase();
-    if (name.includes('foundation')) return { bg: '#f59e0b', border: '#d97706' };
-    if (name.includes('wall')) return { bg: '#8b5cf6', border: '#7c3aed' };
-    if (name.includes('beam')) return { bg: '#64748b', border: '#475569' };
-    if (name.includes('pillar')) return { bg: '#78716c', border: '#57534e' };
-    if (name.includes('roof')) return { bg: '#dc2626', border: '#b91c1c' };
-    if (name.includes('walkway') || name.includes('stairs')) return { bg: '#0891b2', border: '#0e7490' };
+    if (name.includes('foundation')) return { bg: '#e5e7eb', border: '#4b5563', opacity: 0.3 };
+    if (name.includes('wall')) return { bg: '#8b5cf6', border: '#7c3aed', opacity: 0.85 };
+    if (name.includes('beam')) return { bg: '#64748b', border: '#475569', opacity: 0.85 };
+    if (name.includes('pillar')) return { bg: '#78716c', border: '#57534e', opacity: 0.85 };
+    if (name.includes('roof')) return { bg: '#dc2626', border: '#b91c1c', opacity: 0.85 };
+    if (name.includes('walkway') || name.includes('stairs')) return { bg: '#0891b2', border: '#0e7490', opacity: 0.85 };
     if (name.includes('conveyor') || name.includes('splitter') || name.includes('merger')) 
-      return { bg: '#059669', border: '#047857' };
-    return { bg: '#6b7280', border: '#4b5563' };
+      return { bg: '#059669', border: '#047857', opacity: 0.85 };
+    return { bg: '#6b7280', border: '#4b5563', opacity: 0.85 };
   };
 
   const colors = getColor();
+  const isFoundation = buildableName.toLowerCase().includes('foundation');
 
   return (
     <Box
@@ -55,22 +57,27 @@ export const BuildableNode = memo(({ data, selected }: NodeProps<BuildableNodeDa
         justifyContent: 'center',
         position: 'relative',
         cursor: 'move',
-        opacity: 0.85,
+        opacity: colors.opacity,
       }}
     >
-      <Text
-        size="xs"
-        c="white"
-        fw={500}
-        ta="center"
-        style={{
-          wordBreak: 'break-word',
-          lineHeight: 1.2,
-          fontSize: displayWidth < 60 ? '8px' : '11px',
-        }}
-      >
-        {buildableName}
-      </Text>
+      {!isFoundation && (
+        <Text
+          c="white"
+          fw={500}
+          ta="center"
+          style={{
+            fontSize: nameFontSize,
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            lineHeight: 1.2,
+            maxWidth: '100%',
+            padding: '0 4px',
+          }}
+        >
+          {buildableName}
+        </Text>
+      )}
 
       {/* Dimension labels for larger items */}
       {displayWidth > 40 && (
