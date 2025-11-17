@@ -1,21 +1,3 @@
-import { useGameFactoryIsCollapsed } from '@/games/gamesSlice';
-import { Path, setByPath } from '@clickbar/dot-diver';
-import {
-  ActionIcon,
-  Box,
-  Button,
-  Card,
-  Group,
-  Paper,
-  Stack,
-  Text,
-  TextInput,
-  Tooltip,
-} from '@mantine/core';
-import { notifications } from '@mantine/notifications';
-import { IconCalculator, IconCopy, IconTrash } from '@tabler/icons-react';
-import { useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { useFormOnChange } from '@/core/form/useFormOnChange';
 import { useStore } from '@/core/zustand';
 import { FactoryExpandActionIcon } from '@/factories/components/expand/FactoryExpandActionIcon';
@@ -26,7 +8,27 @@ import {
 import { Factory } from '@/factories/Factory';
 import { FactoryInputRow } from '@/factories/inputs/input-row/FactoryInputRow';
 import { FactoryOutputRow } from '@/factories/inputs/output-row/FactoryOutputRow';
+import { FloorPlanner } from '@/factories/planner/FloorPlanner';
 import { useIsFactoryVisible } from '@/factories/useIsFactoryVisible';
+import { useGameFactoryIsCollapsed } from '@/games/gamesSlice';
+import { Path, setByPath } from '@clickbar/dot-diver';
+import {
+  ActionIcon,
+  Box,
+  Button,
+  Card,
+  Group,
+  Paper,
+  Stack,
+  Tabs,
+  Text,
+  TextInput,
+  Tooltip
+} from '@mantine/core';
+import { notifications } from '@mantine/notifications';
+import { IconCalculator, IconCopy, IconLayout2, IconTrash } from '@tabler/icons-react';
+import { useCallback } from 'react';
+import { Link } from 'react-router-dom';
 
 export interface IFactoryWideCardProps {
   id: string;
@@ -176,6 +178,31 @@ export function FactoryWideCard(props: IFactoryWideCardProps) {
                 />
               ))}
             </Stack>
+          </Paper>
+        </Card.Section>
+      )}
+      {!isCollapsed && (
+        <Card.Section title="Floor Planner" withBorder>
+          <Paper radius="sm" p="sm">
+            <Tabs defaultValue="overview">
+              <Tabs.List>
+                <Tabs.Tab value="overview">Overview</Tabs.Tab>
+                <Tabs.Tab value="planner" leftSection={<IconLayout2 size={14} />}>
+                  Floor Planner
+                </Tabs.Tab>
+              </Tabs.List>
+
+              <Tabs.Panel value="overview" pt="sm">
+                <Text size="sm" c="dimmed">
+                  Use the Floor Planner tab to design your factory layout in 2D space.
+                  Place buildings, foundations, and other buildables to plan your factory floor.
+                </Text>
+              </Tabs.Panel>
+
+              <Tabs.Panel value="planner" pt="sm">
+                <FloorPlanner factoryId={factory.id} />
+              </Tabs.Panel>
+            </Tabs>
           </Paper>
         </Card.Section>
       )}

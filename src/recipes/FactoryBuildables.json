@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "foundation_1m_ficsit",
+    "name": "Foundation 1m (FICSIT)",
+    "index": 1,
+    "description": "FICSIT standard 8m x 8m x 1m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_2m_ficsit",
+    "name": "Foundation 2m (FICSIT)",
+    "index": 2,
+    "description": "FICSIT standard 8m x 8m x 2m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_4m_ficsit",
+    "name": "Foundation 4m (FICSIT)",
+    "index": 3,
+    "description": "FICSIT standard 8m x 8m x 4m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_1m_grip_metal",
+    "name": "Foundation 1m (Grip Metal)",
+    "index": 4,
+    "description": "Grip metal 8m x 8m x 1m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_2m_grip_metal",
+    "name": "Foundation 2m (Grip Metal)",
+    "index": 5,
+    "description": "Grip metal 8m x 8m x 2m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_4m_grip_metal",
+    "name": "Foundation 4m (Grip Metal)",
+    "index": 6,
+    "description": "Grip metal 8m x 8m x 4m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_1m_concrete",
+    "name": "Foundation 1m (Concrete)",
+    "index": 7,
+    "description": "Concrete 8m x 8m x 1m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_2m_concrete",
+    "name": "Foundation 2m (Concrete)",
+    "index": 8,
+    "description": "Concrete 8m x 8m x 2m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_4m_concrete",
+    "name": "Foundation 4m (Concrete)",
+    "index": 9,
+    "description": "Concrete 8m x 8m x 4m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_1m_asphalt",
+    "name": "Foundation 1m (Asphalt)",
+    "index": 10,
+    "description": "Asphalt 8m x 8m x 1m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_2m_asphalt",
+    "name": "Foundation 2m (Asphalt)",
+    "index": 11,
+    "description": "Asphalt 8m x 8m x 2m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_4m_asphalt",
+    "name": "Foundation 4m (Asphalt)",
+    "index": 12,
+    "description": "Asphalt 8m x 8m x 4m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_1m_coated",
+    "name": "Foundation 1m (Coated)",
+    "index": 13,
+    "description": "Coated concrete 8m x 8m x 1m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Plastic", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_2m_coated",
+    "name": "Foundation 2m (Coated)",
+    "index": 14,
+    "description": "Coated concrete 8m x 8m x 2m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Plastic", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "foundation_4m_coated",
+    "name": "Foundation 4m (Coated)",
+    "index": 15,
+    "description": "Coated concrete 8m x 8m x 4m foundation platform",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Plastic", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "ramp_1m_ficsit",
+    "name": "Ramp 1m (FICSIT)",
+    "index": 16,
+    "description": "FICSIT standard 8m x 8m x 1m ramp",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "ramp_2m_ficsit",
+    "name": "Ramp 2m (FICSIT)",
+    "index": 17,
+    "description": "FICSIT standard 8m x 8m x 2m ramp",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "ramp_4m_ficsit",
+    "name": "Ramp 4m (FICSIT)",
+    "index": 18,
+    "description": "FICSIT standard 8m x 8m x 4m ramp",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_4m_ficsit",
+    "name": "Wall 4m (FICSIT)",
+    "index": 19,
+    "description": "FICSIT standard 8m x 1m x 4m wall",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_1m_ficsit",
+    "name": "Wall 1m (FICSIT)",
+    "index": 20,
+    "description": "FICSIT standard 8m x 1m x 1m wall segment",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_4m_steel",
+    "name": "Wall 4m (Steel)",
+    "index": 21,
+    "description": "Steel 8m x 1m x 4m wall",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_1m_steel",
+    "name": "Wall 1m (Steel)",
+    "index": 22,
+    "description": "Steel 8m x 1m x 1m wall segment",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_4m_concrete",
+    "name": "Wall 4m (Concrete)",
+    "index": 23,
+    "description": "Concrete 8m x 1m x 4m wall",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_1m_concrete",
+    "name": "Wall 1m (Concrete)",
+    "index": 24,
+    "description": "Concrete 8m x 1m x 1m wall segment",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_window_ficsit",
+    "name": "Wall Window (FICSIT)",
+    "index": 25,
+    "description": "FICSIT wall with single window",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Silica", "quantity": 2 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "wall_door_center_ficsit",
+    "name": "Wall Door Center (FICSIT)",
+    "index": 26,
+    "description": "FICSIT wall with center-mounted door",
+    "clearance": {
+      "width": 8,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "beam_metal",
+    "name": "Metal Beam",
+    "index": 27,
+    "description": "Variable length metal beam (up to 40m)",
+    "clearance": {
+      "width": 0.5,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "beam_painted",
+    "name": "Painted Beam",
+    "index": 28,
+    "description": "Customizable painted beam (up to 40m)",
+    "clearance": {
+      "width": 0.5,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "beam_connector",
+    "name": "Beam Connector",
+    "index": 29,
+    "description": "Single beam connector joint",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "beam_connector_double",
+    "name": "Beam Connector Double",
+    "index": 30,
+    "description": "Double beam connector joint",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "beam_support",
+    "name": "Beam Support",
+    "index": 31,
+    "description": "Vertical beam support",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "pillar_big_support",
+    "name": "Big Pillar (Support)",
+    "index": 32,
+    "description": "Large support pillar",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 8
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "pillar_big_metal",
+    "name": "Big Pillar (Metal)",
+    "index": 33,
+    "description": "Large metal pillar",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 8
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "pillar_big_concrete",
+    "name": "Big Pillar (Concrete)",
+    "index": 34,
+    "description": "Large concrete pillar",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 8
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "pillar_big_frame",
+    "name": "Big Pillar (Frame)",
+    "index": 35,
+    "description": "Large frame pillar",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 8
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "pillar_small_support",
+    "name": "Small Pillar (Support)",
+    "index": 36,
+    "description": "Small support pillar",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "pillar_small_metal",
+    "name": "Small Pillar (Metal)",
+    "index": 37,
+    "description": "Small metal pillar",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "pillar_small_concrete",
+    "name": "Small Pillar (Concrete)",
+    "index": 38,
+    "description": "Small concrete pillar",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "pillar_small_frame",
+    "name": "Small Pillar (Frame)",
+    "index": 39,
+    "description": "Small frame pillar",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 1 },
+      { "material": "Concrete", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "roof_flat_ficsit",
+    "name": "Roof Flat (FICSIT)",
+    "index": 40,
+    "description": "FICSIT flat 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_1m_ficsit",
+    "name": "Roof 1m (FICSIT)",
+    "index": 41,
+    "description": "FICSIT 1m sloped 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_2m_ficsit",
+    "name": "Roof 2m (FICSIT)",
+    "index": 42,
+    "description": "FICSIT 2m sloped 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_4m_ficsit",
+    "name": "Roof 4m (FICSIT)",
+    "index": 43,
+    "description": "FICSIT 4m sloped 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_flat_tar",
+    "name": "Roof Flat (Tar)",
+    "index": 44,
+    "description": "Tar flat 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_flat_steel",
+    "name": "Roof Flat (Steel)",
+    "index": 45,
+    "description": "Steel flat 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "roof_flat_glass",
+    "name": "Roof Flat (Glass)",
+    "index": 46,
+    "description": "Glass flat 8m x 8m roof",
+    "clearance": {
+      "width": 8,
+      "length": 8,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 3 },
+      { "material": "Silica", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "stairs_left",
+    "name": "Stairs Left",
+    "index": 47,
+    "description": "Left-oriented staircase attachment",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "stairs_right",
+    "name": "Stairs Right",
+    "index": 48,
+    "description": "Right-oriented staircase attachment",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 5 },
+      { "material": "Iron Plate", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "railing_modern",
+    "name": "Modern Railing",
+    "index": 49,
+    "description": "Modern style railing attachment",
+    "clearance": {
+      "width": 8,
+      "length": 0.25,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "railing_industrial",
+    "name": "Industrial Railing",
+    "index": 50,
+    "description": "Industrial style railing attachment",
+    "clearance": {
+      "width": 8,
+      "length": 0.25,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Iron Rod", "quantity": 4 }
+    ]
+  },
+  {
+    "id": "road_barrier",
+    "name": "Road Barrier",
+    "index": 51,
+    "description": "Road safety barrier",
+    "clearance": {
+      "width": 8,
+      "length": 0.5,
+      "height": 1
+    },
+    "buildCost": [
+      { "material": "Concrete", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "walkway_straight",
+    "name": "Walkway Straight",
+    "index": 52,
+    "description": "Straight 4m x 4m walkway with railings",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "walkway_turn",
+    "name": "Walkway Turn",
+    "index": 53,
+    "description": "90-degree turn 4m x 4m walkway",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "walkway_crossing",
+    "name": "Walkway Crossing",
+    "index": 54,
+    "description": "4-way crossing 4m x 4m walkway",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "walkway_t_crossing",
+    "name": "Walkway T-Crossing",
+    "index": 55,
+    "description": "T-junction 4m x 4m walkway",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "walkway_ramp",
+    "name": "Walkway Ramp",
+    "index": 56,
+    "description": "Inclined 4m x 4m walkway ramp (2m rise)",
+    "clearance": {
+      "width": 4,
+      "length": 4,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "ladder",
+    "name": "Ladder",
+    "index": 57,
+    "description": "Vertical ladder for wall attachment",
+    "clearance": {
+      "width": 1,
+      "length": 0.5,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_merger",
+    "name": "Conveyor Merger",
+    "index": 58,
+    "description": "Merges up to three input conveyors in sequence and outputs all resources onto the output conveyor. Has an internal inventory of 9 items.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_splitter",
+    "name": "Conveyor Splitter",
+    "index": 59,
+    "description": "Takes items from a single input Conveyor Belt or Lift and outputs them between three other belts. Has an internal inventory of 9 items.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 },
+      { "material": "Iron Rod", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "smart_splitter",
+    "name": "Smart Splitter",
+    "index": 60,
+    "description": "Upgraded version of the Splitter capable of filtering its input and handling overflow. Each output can be set to Any, None, Any Undefined, Overflow, or a specific item type.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 2 },
+      { "material": "Rotor", "quantity": 2 },
+      { "material": "AI Limiter", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "programmable_splitter",
+    "name": "Programmable Splitter",
+    "index": 61,
+    "description": "Upgraded version of Smart Splitter that allows multiple items per output with a maximum of 64 rules total. Unlocked via Caterium Research in MAM.",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 2
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 4 },
+      { "material": "Rotor", "quantity": 4 },
+      { "material": "AI Limiter", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk1",
+    "name": "Conveyor Lift Mk.1",
+    "index": 62,
+    "description": "Transports up to 60 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk2",
+    "name": "Conveyor Lift Mk.2",
+    "index": 63,
+    "description": "Transports up to 120 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk3",
+    "name": "Conveyor Lift Mk.3",
+    "index": 64,
+    "description": "Transports up to 270 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk4",
+    "name": "Conveyor Lift Mk.4",
+    "index": 65,
+    "description": "Transports up to 480 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Encased Industrial Beam", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_lift_mk5",
+    "name": "Conveyor Lift Mk.5",
+    "index": 66,
+    "description": "Transports up to 780 resources per minute vertically. Height adjustable from 4-48 meters (or infinite with Floor Holes).",
+    "clearance": {
+      "width": 2,
+      "length": 2,
+      "height": 4
+    },
+    "buildCost": [
+      { "material": "Alclad Aluminum Sheet", "quantity": 2 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk1",
+    "name": "Conveyor Belt Mk.1",
+    "index": 67,
+    "description": "Transports up to 60 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Iron Plate", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk2",
+    "name": "Conveyor Belt Mk.2",
+    "index": 68,
+    "description": "Transports up to 120 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Reinforced Iron Plate", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk3",
+    "name": "Conveyor Belt Mk.3",
+    "index": 69,
+    "description": "Transports up to 270 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Steel Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk4",
+    "name": "Conveyor Belt Mk.4",
+    "index": 70,
+    "description": "Transports up to 480 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Encased Industrial Beam", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk5",
+    "name": "Conveyor Belt Mk.5",
+    "index": 71,
+    "description": "Transports up to 780 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Alclad Aluminum Sheet", "quantity": 1 }
+    ]
+  },
+  {
+    "id": "conveyor_belt_mk6",
+    "name": "Conveyor Belt Mk.6",
+    "index": 72,
+    "description": "Transports up to 1200 resources per minute. Used to move resources between buildings.",
+    "clearance": {
+      "width": 1,
+      "length": 1,
+      "height": 0.5
+    },
+    "buildCost": [
+      { "material": "Ficsonium", "quantity": 1 }
+    ]
+  }
+]
