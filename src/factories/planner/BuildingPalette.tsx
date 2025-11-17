@@ -1,18 +1,31 @@
 import { AllFactoryBuildables } from '@/recipes/FactoryBuildable';
 import AllFactoryBuildings from '@/recipes/FactoryBuildings.json';
-import { ActionIcon, Button, Collapse, Group, ScrollArea, Stack, Tabs, Text } from '@mantine/core';
-import { IconChevronDown, IconChevronRight } from '@tabler/icons-react';
+import { ActionIcon, Box, Button, Collapse, Group, NumberInput, Popover, ScrollArea, Stack, Switch, Tabs, Text } from '@mantine/core';
+import { IconChevronDown, IconChevronRight, IconGrid3x3 } from '@tabler/icons-react';
 import { useState } from 'react';
 
 interface BuildingPaletteProps {
   onAddBuilding: (id: string, name: string, clearance: { width: number; length: number }) => void;
   onAddBuildable: (id: string, name: string, clearance: { width: number; length: number }) => void;
+  onBuildFoundationGrid?: (rows: number, cols: number) => void;
+  showGrid?: boolean;
+  onToggleGrid?: (checked: boolean) => void;
 }
 
-export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPaletteProps) {
+export function BuildingPalette({ onAddBuilding, onAddBuildable, onBuildFoundationGrid, showGrid, onToggleGrid }: BuildingPaletteProps) {
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({
     foundations: true,
   });
+  const [gridOpen, setGridOpen] = useState(false);
+  // Default foundation to 2m foundation if present, else first foundation
+  const defaultFoundationId = (() => {
+    const foundations = AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('foundation'));
+    const twoM = foundations.find((b) => b.name.toLowerCase().includes('2m')) || foundations[0];
+    return twoM ? twoM.id : null;
+  })();
+  // Generic foundation only (8x8m grey square)
+  const [gridRows, setGridRows] = useState<number | ''>(8);
+  const [gridCols, setGridCols] = useState<number | ''>(8);
 
   const toggleCategory = (category: string) => {
     setExpandedCategories((prev) => ({ ...prev, [category]: !prev[category] }));
@@ -20,22 +33,8 @@ export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPalet
 
   // Group buildables by type
   const buildableCategories = {
-    foundations: AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('foundation')),
-    walls: AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('wall')),
-    beams: AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('beam')),
-    pillars: AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('pillar')),
-    roofs: AllFactoryBuildables.filter((b) => b.name.toLowerCase().includes('roof')),
-    walkways: AllFactoryBuildables.filter((b) => 
-      b.name.toLowerCase().includes('walkway') || 
-      b.name.toLowerCase().includes('stairs') || 
-      b.name.toLowerCase().includes('railing') ||
-      b.name.toLowerCase().includes('ladder')
-    ),
-    logistics: AllFactoryBuildables.filter((b) => 
-      b.name.toLowerCase().includes('conveyor') || 
-      b.name.toLowerCase().includes('splitter') ||
-      b.name.toLowerCase().includes('merger')
-    ),
+    foundations: [{ id: 'foundation_generic', name: 'Foundation', clearance: { width: 8, length: 8 } }],
+    walls: [{ id: 'wall_generic', name: 'Wall', clearance: { width: 8, length: 0.5 } }],
   };
 
   // Group buildings by type
@@ -65,16 +64,43 @@ export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPalet
   }) => {
     const categoryKey = title.toLowerCase().replace(/\s+/g, '-');
     const isExpanded = expandedCategories[categoryKey];
+    const isFoundations = categoryKey === 'foundations';
 
     return (
       <Stack gap="xs">
-        <Group gap="xs" style={{ cursor: 'pointer' }} onClick={() => toggleCategory(categoryKey)}>
-          <ActionIcon variant="subtle" size="xs">
-            {isExpanded ? <IconChevronDown size={14} /> : <IconChevronRight size={14} />}
-          </ActionIcon>
-          <Text size="xs" fw={600} tt="uppercase" c="dimmed">
-            {title} ({items.length})
-          </Text>
+        <Group gap="xs" align="center">
+          <Group gap="xs" style={{ cursor: 'pointer' }} onClick={() => toggleCategory(categoryKey)}>
+            <ActionIcon variant="subtle" size="xs">
+              {isExpanded ? <IconChevronDown size={14} /> : <IconChevronRight size={14} />}
+            </ActionIcon>
+            <Text size="xs" fw={600} tt="uppercase" c="#808080">
+              {title} ({items.length})
+            </Text>
+          </Group>
+          {isFoundations && onBuildFoundationGrid && (
+            <Popover opened={gridOpen} onChange={setGridOpen} withinPortal position="bottom-end" closeOnClickOutside={false} trapFocus>
+              <Popover.Target>
+                <ActionIcon size="sm" variant="light" onClick={() => setGridOpen((o) => !o)} title="Build foundation grid">
+                  <IconGrid3x3 size={14} />
+                </ActionIcon>
+              </Popover.Target>
+              <Popover.Dropdown>
+                <Stack gap="xs" style={{ minWidth: 220 }}>
+                  <Text size="xs" fw={600}>Build m×n Grid</Text>
+                  <Group grow>
+                    <NumberInput label="m" min={1} max={200} value={gridRows} onChange={(v) => setGridRows(typeof v === 'number' ? v : '')} allowDecimal={false} />
+                    <NumberInput label="n" min={1} max={200} value={gridCols} onChange={(v) => setGridCols(typeof v === 'number' ? v : '')} allowDecimal={false} />
+                  </Group>
+                  <Button size="xs" onClick={() => {
+                    if (typeof gridRows === 'number' && typeof gridCols === 'number') {
+                      onBuildFoundationGrid(gridRows, gridCols);
+                      setGridOpen(false);
+                    }
+                  }}>Build</Button>
+                </Stack>
+              </Popover.Dropdown>
+            </Popover>
+          )}
         </Group>
         <Collapse in={isExpanded}>
           <Stack gap="xs" pl="md">
@@ -111,23 +137,53 @@ export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPalet
   };
 
   return (
-    <Stack
-      gap="md"
+    <Box
       style={{
-        background: 'white',
+        backgroundColor: '#2d2d30',
         padding: '12px',
         borderRadius: '8px',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+        border: '1px solid #3e3e42',
         width: '280px',
         maxHeight: '700px',
       }}
     >
-      <Text size="sm" fw={600}>
-        Building Palette
-      </Text>
+      <Stack gap="md">
+      <Group justify="space-between" align="center">
+        <Text size="sm" fw={600} c="#cccccc">
+          Building Palette
+        </Text>
+        <Group gap="xs">
+          {onToggleGrid && (
+            <Switch
+              size="xs"
+              label="Grid"
+              checked={!!showGrid}
+              onChange={(e) => onToggleGrid(e.currentTarget.checked)}
+            />
+          )}
+          <Popover withinPortal position="bottom-end">
+            <Popover.Target>
+              <ActionIcon size="sm" variant="light" title="Keyboard shortcuts">
+                ?
+              </ActionIcon>
+            </Popover.Target>
+            <Popover.Dropdown>
+              <Stack gap={2}>
+                <Text size="xs" fw={600}>Shortcuts</Text>
+                <Text size="xs">Cmd/Ctrl+R: Rotate 45°</Text>
+                <Text size="xs">Cmd/Ctrl+C / V: Copy / Paste</Text>
+                <Text size="xs">Delete/Backspace: Delete</Text>
+                <Text size="xs">Cmd/Ctrl+Z: Undo</Text>
+                <Text size="xs">Shift+Cmd/Ctrl+Z or Cmd/Ctrl+Y: Redo</Text>
+              </Stack>
+            </Popover.Dropdown>
+          </Popover>
+        </Group>
+      </Group>
 
-      <Tabs defaultValue="buildables">
-        <Tabs.List>
+      <Tabs defaultValue="buildables" styles={{ root: { backgroundColor: 'transparent' }, panel: { backgroundColor: 'transparent' } }}>
+        <Tabs.List grow justify="space-between">
           <Tabs.Tab value="buildables">Buildables</Tabs.Tab>
           <Tabs.Tab value="buildings">Buildings</Tabs.Tab>
         </Tabs.List>
@@ -137,11 +193,6 @@ export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPalet
             <Stack gap="md">
               <CategorySection title="Foundations" items={buildableCategories.foundations} type="buildable" />
               <CategorySection title="Walls" items={buildableCategories.walls} type="buildable" />
-              <CategorySection title="Beams" items={buildableCategories.beams} type="buildable" />
-              <CategorySection title="Pillars" items={buildableCategories.pillars} type="buildable" />
-              <CategorySection title="Roofs" items={buildableCategories.roofs} type="buildable" />
-              <CategorySection title="Walkways" items={buildableCategories.walkways} type="buildable" />
-              <CategorySection title="Logistics" items={buildableCategories.logistics} type="buildable" />
             </Stack>
           </ScrollArea>
         </Tabs.Panel>
@@ -156,5 +207,6 @@ export function BuildingPalette({ onAddBuilding, onAddBuildable }: BuildingPalet
         </Tabs.Panel>
       </Tabs>
     </Stack>
+    </Box>
   );
 }
